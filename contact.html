@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Disco-Fiesta</title>
+  <meta name="description" content="Contactez Disco-Fiesta pour réserver votre spectacle disco et faire de votre événement un moment inoubliable">
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <!-- Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <h1>Disco-Fiesta</h1>
+      </a>
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="prestations.html" class="nav-link">Prestations</a>
+        <a href="galerie.html" class="nav-link">Galerie</a>
+        <a href="references.html" class="nav-link">Références</a>
+        <a href="contact.html" class="nav-link active cta">Réserver</a>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="mobile-menu">
+      <nav>
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="prestations.html" class="nav-link">Prestations</a>
+        <a href="galerie.html" class="nav-link">Galerie</a>
+        <a href="references.html" class="nav-link">Références</a>
+        <a href="contact.html" class="nav-link active cta">Réserver</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main class="contact-main">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>Réservez le Disco-Fiesta</h1>
+        <p>Offrez à vos invités un spectacle disco d'exception pour rendre votre événement inoubliable</p>
+      </div>
+    </section>
+
+    <!-- Contact Form and Info -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-container">
+          <!-- Form -->
+          <div class="form-container fade-in-left">
+            <div id="form-content">
+              <form id="contact-form">
+                <h2>Demande de devis</h2>
+                
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="nom">Nom</label>
+                    <input 
+                      type="text" 
+                      id="nom" 
+                      name="nom" 
+                      required
+                      class="form-control"
+                    >
+                    <p class="error-message" id="nom-error"></p>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="prenom">Prénom</label>
+                    <input 
+                      type="text" 
+                      id="prenom" 
+                      name="prenom" 
+                      required
+                      class="form-control"
+                    >
+                    <p class="error-message" id="prenom-error"></p>
+                  </div>
+                </div>
+                
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      name="email" 
+                      required
+                      class="form-control"
+                    >
+                    <p class="error-message" id="email-error"></p>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="telephone">Téléphone</label>
+                    <input 
+                      type="tel" 
+                      id="telephone" 
+                      name="telephone" 
+                      required
+                      class="form-control"
+                    >
+                    <p class="error-message" id="telephone-error"></p>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="typeEvenement">Type d'événement</label>
+                  <select 
+                    id="typeEvenement" 
+                    name="typeEvenement" 
+                    required
+                    class="form-control"
+                  >
+                    <option value="">Sélectionnez</option>
+                    <option value="entreprise">Événement d'entreprise</option>
+                    <option value="mariage">Mariage</option>
+                    <option value="anniversaire">Anniversaire</option>
+                    <option value="festival">Festival</option>
+                    <option value="autre">Autre</option>
+                  </select>
+                  <p class="error-message" id="typeEvenement-error"></p>
+                </div>
+                
+                <div class="form-group">
+                  <label for="date">Date souhaitée</label>
+                  <input 
+                    type="date" 
+                    id="date" 
+                    name="date" 
+                    required
+                    class="form-control"
+                  >
+                  <p class="error-message" id="date-error"></p>
+                </div>
+                
+                <div class="form-group">
+                  <label for="nombreInvites">Nombre d'invités</label>
+                  <input 
+                    type="number" 
+                    id="nombreInvites" 
+                    name="nombreInvites" 
+                    required
+                    min="1"
+                    class="form-control"
+                  >
+                  <p class="error-message" id="nombreInvites-error"></p>
+                </div>
+                
+                <div class="form-group">
+                  <label for="message">Message / Détails sur votre projet</label>
+                  <textarea 
+                    id="message" 
+                    name="message" 
+                    rows="5" 
+                    required
+                    class="form-control"
+                  ></textarea>
+                  <p class="error-message" id="message-error"></p>
+                </div>
+                
+                <button 
+                  type="submit"
+                  class="submit-btn"
+                >
+                  Envoyer ma demande
+                </button>
+              </form>
+            </div>
+            
+            <div id="success-message" class="hidden">
+              <h2>Merci pour votre demande !</h2>
+              <p>Nous avons bien reçu votre message et reviendrons vers vous dans les plus brefs délais.</p>
+              <button id="new-request-btn" class="submit-btn">
+                Nouvelle demande
+              </button>
+            </div>
+          </div>
+          
+          <!-- Contact Info -->
+          <div class="info-container fade-in-right">
+            <h2>Contactez-nous</h2>
+            
+            <div class="contact-info">
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div>
+                  <h3>Téléphone</h3>
+                  <p>+33 6 52 84 80 79</p>
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <h3>Email</h3>
+                  <p>discofiesta.agency@gmail.com</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="why-choose-us">
+              <h3>Pourquoi nous choisir ?</h3>
+              <ul>
+                <li>
+                  <i class="fas fa-calendar-alt"></i>
+                  <span>Plus de 300 événements à notre actif</span>
+                </li>
+                <li>
+                  <i class="fas fa-users"></i>
+                  <span>Une équipe de professionnels passionnés</span>
+                </li>
+                <li>
+                  <i class="fas fa-music"></i>
+                  <span>Un répertoire disco incomparable</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h2>Disco-Fiesta</h2>
+          <p>Le meilleur du disco pour vos événements</p>
+        </div>
+        <div class="footer-cta">
+          <a href="contact.html" class="btn btn-gradient">Contactez-nous</a>
+        </div>
+      </div>
+      
+      <div class="social-links">
+        <a href="https://facebook.com/discofiesta" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://instagram.com/discofiesta" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com/discofiesta" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+      
+      <div class="copyright">
+        © <span id="year"></span> Disco-Fiesta. Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

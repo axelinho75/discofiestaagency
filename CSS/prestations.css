@@ -1,0 +1,151 @@
+/* Styles spécifiques pour la page Prestations */
+
+/* Fond dégradé pour main */
+.prestations-main {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, var(--color-black), #4a1d96);
+    padding-top: 70px; /* Pour éviter que le header fixe cache le contenu */
+  }
+  
+  /* Hero section */
+  .hero-section {
+    padding: 6rem 2rem;
+    text-align: center;
+    color: var(--color-white);
+  }
+  
+  .hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-section p {
+    font-size: 1.25rem;
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+  
+  /* Prestations list */
+  .prestations-list {
+    padding: 3rem 1rem;
+  }
+  
+  .prestation-card {
+    margin-bottom: 6rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .prestation-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .prestation-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .prestation-image {
+    width: 100%;
+    height: 15rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .prestation-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .prestation-info {
+    padding: 2rem;
+    color: var(--color-white);
+  }
+  
+  .prestation-info h2 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .prestation-info p {
+    margin-bottom: 1.5rem;
+  }
+  
+  .prestation-info ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .prestation-info ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* CTA Section */
+  .cta-section {
+    padding: 4rem 1rem;
+    text-align: center;
+    background: linear-gradient(to right, var(--color-purple-dark), var(--color-pink-dark));
+    color: var(--color-white);
+  }
+  
+  .cta-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .btn-white {
+    background-color: var(--color-white);
+    color: var(--color-purple-dark);
+    font-weight: bold;
+    padding: 1rem 2rem;
+  }
+  
+  .btn-white:hover {
+    background-color: #f8f8f8;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Media queries */
+  @media (min-width: 768px) {
+    .prestation-content {
+      flex-direction: row;
+      align-items: stretch;
+    }
+    
+    .prestation-content.reversed {
+      flex-direction: row-reverse;
+    }
+    
+    .prestation-image {
+      width: 50%;
+      height: auto;
+    }
+    
+    .prestation-info {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .hero-section h1 {
+      font-size: 4rem;
+    }
+  }

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prestations | Disco-Fiesta</title>
+  <meta name="description" content="Découvrez les prestations de Disco-Fiesta : soirées à thème, événements publics et événements d'entreprise. Un show disco inoubliable pour tous vos événements.">
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/prestations.css">
+  <!-- Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <h1>Disco-Fiesta</h1>
+      </a>
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="prestations.html" class="nav-link active">Prestations</a>
+        <a href="galerie.html" class="nav-link">Galerie</a>
+        <a href="references.html" class="nav-link">Références</a>
+        <a href="contact.html" class="nav-link cta">Réserver</a>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="mobile-menu">
+      <nav>
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="prestations.html" class="nav-link active">Prestations</a>
+        <a href="galerie.html" class="nav-link">Galerie</a>
+        <a href="references.html" class="nav-link">Références</a>
+        <a href="contact.html" class="nav-link cta">Réserver</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main class="prestations-main">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>Nos Prestations</h1>
+        <p>Faites briller vos événements avec la magie Disco-Fiesta</p>
+      </div>
+    </section>
+
+    <!-- Prestations List -->
+    <section class="prestations-list">
+      <div class="container">
+        <!-- Prestation 1 -->
+        <div class="prestation-card" data-animation-delay="0">
+          <div class="prestation-content">
+            <div class="prestation-image">
+              <img src="images/theme-night.jpg" alt="Soirées à thème">
+            </div>
+            <div class="prestation-info">
+              <h2>Soirées à thème</h2>
+              <p>Embarquez pour un voyage disco inoubliable, idéal pour vos réceptions, clubs, et casinos</p>
+              
+              <a href="contact.html" class="btn btn-gradient">Demander un devis</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prestation 2 -->
+        <div class="prestation-card" data-animation-delay="100">
+          <div class="prestation-content reversed">
+            <div class="prestation-image">
+              <img src="images/festival.jpg" alt="Événements publics">
+            </div>
+            <div class="prestation-info">
+              <h2>Événements publics</h2>
+              <p>Faites danser votre public au rythme du disco avec un spectacle explosif et dynamique.</p>
+              
+              <a href="contact.html" class="btn btn-gradient">Demander un devis</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prestation 3 -->
+        <div class="prestation-card" data-animation-delay="200">
+          <div class="prestation-content">
+            <div class="prestation-image">
+              <img src="images/corporate.jpg" alt="Événements d'entreprise">
+            </div>
+            <div class="prestation-info">
+              <h2>Événements d'entreprise</h2>
+              <p>Électrisez vos séminaires et soirées de gala avec un spectacle disco exceptionnel !</p>
+              <a href="contact.html" class="btn btn-gradient">Demander un devis</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Une prestation sur mesure ?</h2>
+        <p>Nous adaptons notre show à tous types d'événements</p>
+        <a href="contact.html" class="btn btn-white">Contactez-nous</a>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h2>Disco-Fiesta</h2>
+          <p>Le meilleur du disco pour vos événements</p>
+        </div>
+        <div class="footer-cta">
+          <a href="contact.html" class="btn btn-gradient">Contactez-nous</a>
+        </div>
+      </div>
+      
+      <div class="social-links">
+        <a href="https://facebook.com/discofiesta" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://instagram.com/discofiesta" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com/discofiesta" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+      
+      <div class="copyright">
+        © <span id="year"></span> Disco-Fiesta. Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/prestations.js"></script>
+</body>
+</html>

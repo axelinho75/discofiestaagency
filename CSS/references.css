@@ -1,0 +1,141 @@
+/* Styles spécifiques pour la page Références */
+
+/* Main avec fond noir */
+.references-main {
+    min-height: 100vh;
+    background-color: var(--color-black);
+    padding-top: 70px; /* Pour éviter que le header fixe cache le contenu */
+  }
+  
+  /* Hero section */
+  .hero-section {
+    padding: 6rem 1rem;
+    text-align: center;
+    color: var(--color-white);
+  }
+  
+  .hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-section p {
+    font-size: 1.25rem;
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+  
+  /* Section clients */
+  .clients-section {
+    padding: 5rem 1rem;
+    background-color: #111827; /* bg-gray-900 */
+  }
+  
+  .clients-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .clients-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .client-card {
+    background-color: rgba(255, 255, 255, 0.1); /* bg-white/10 */
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .client-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .client-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .client-name {
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #d1d5db; /* text-gray-300 */
+  }
+  
+  .client-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+  }
+  
+  .client-card:hover .client-logo {
+    filter: grayscale(0);
+  }
+  
+  /* CTA Section */
+  .cta-section {
+    padding: 4rem 1rem;
+    background: linear-gradient(to right, #6b21a8, #be185d); /* from-purple-800 to-pink-800 */
+    text-align: center;
+    color: white;
+  }
+  
+  .cta-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cta-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .btn-white {
+    background-color: white;
+    color: #6b21a8; /* text-purple-900 */
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .btn-white:hover {
+    background-color: #f9fafb;
+    transform: translateY(-2px);
+  }
+  
+  /* Media queries */
+  @media (min-width: 768px) {
+    .clients-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .hero-section h1 {
+      font-size: 4rem;
+    }
+  }

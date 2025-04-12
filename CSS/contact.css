@@ -1,0 +1,229 @@
+/* Styles spécifiques pour la page Contact */
+
+/* Main avec fond noir */
+.contact-main {
+    min-height: 100vh;
+    background-color: var(--color-black);
+    padding-top: 70px; /* Pour éviter que le header fixe cache le contenu */
+  }
+  
+  /* Hero section */
+  .hero-section {
+    padding: 6rem 1rem;
+    text-align: center;
+    color: var(--color-white);
+  }
+  
+  .hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-section p {
+    font-size: 1.25rem;
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+  
+  /* Contact section */
+  .contact-section {
+    padding: 3rem 1rem 6rem;
+  }
+  
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  /* Form container */
+  .form-container {
+    flex: 2;
+    background: linear-gradient(to bottom right, rgba(147, 51, 234, 0.3), rgba(236, 72, 153, 0.3));
+    padding: 2rem;
+    border-radius: 0.75rem;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: fadeInLeft 0.6s forwards;
+  }
+  
+  @keyframes fadeInLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Info container */
+  .info-container {
+    flex: 1;
+    opacity: 0;
+    transform: translateX(50px);
+    animation: fadeInRight 0.6s forwards;
+    animation-delay: 0.2s;
+  }
+  
+  @keyframes fadeInRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Form styles */
+  .form-container h2, 
+  .info-container h2 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #9333ea; /* border-purple-700 */
+    color: white;
+  }
+  
+  .form-control:focus {
+    border-color: #ec4899; /* border-pink-500 */
+    outline: none;
+  }
+  
+  .error-message {
+    color: #ec4899; /* text-pink-500 */
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    background: linear-gradient(to right, #9333ea, #ec4899);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background: linear-gradient(to right, #6b21a8, #be185d);
+  }
+  
+  /* Success message */
+  #success-message {
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+  
+  #success-message h2 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  #success-message p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Contact info styles */
+  .contact-info {
+    margin-bottom: 2rem;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+  
+  .info-icon {
+    background: linear-gradient(to bottom right, #9333ea, #ec4899);
+    padding: 0.75rem;
+    border-radius: 9999px;
+    margin-right: 1rem;
+  }
+  
+  .info-icon i {
+    color: white;
+  }
+  
+  .info-item h3 {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+  
+  /* Why choose us */
+  .why-choose-us {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: linear-gradient(to bottom right, rgba(147, 51, 234, 0.3), rgba(236, 72, 153, 0.3));
+    border-radius: 0.75rem;
+  }
+  
+  .why-choose-us h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .why-choose-us ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .why-choose-us li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .why-choose-us i {
+    color: #ec4899; /* text-pink-400 */
+    margin-right: 0.75rem;
+  }
+  
+  /* Media queries */
+  @media (min-width: 768px) {
+    .contact-container {
+      flex-direction: row;
+    }
+    
+    .form-row {
+      flex-direction: row;
+    }
+    
+    .form-row > .form-group {
+      width: 50%;
+    }
+    
+    .hero-section h1 {
+      font-size: 4rem;
+    }
+  }

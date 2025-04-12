@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie | Disco-Fiesta</title>
+  <meta name="description" content="Découvrez en images les performances du Disco-Fiesta à travers la France : photos et vidéos de nos spectacles et événements">
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/galerie.css">
+  <!-- Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <h1>Disco-Fiesta</h1>
+      </a>
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="prestations.html" class="nav-link">Prestations</a>
+        <a href="galerie.html" class="nav-link active">Galerie</a>
+        <a href="references.html" class="nav-link">Références</a>
+        <a href="contact.html" class="nav-link cta">Réserver</a>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="mobile-menu">
+      <nav>
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="prestations.html" class="nav-link">Prestations</a>
+        <a href="galerie.html" class="nav-link active">Galerie</a>
+        <a href="references.html" class="nav-link">Références</a>
+        <a href="contact.html" class="nav-link cta">Réserver</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main class="gallery-main">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>Notre Galerie</h1>
+        <p>Découvrez en images les performances du Disco-Fiesta à travers la France et au-delà</p>
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters-section">
+      <div class="container">
+        <div class="filters-container">
+          <button 
+            class="filter-btn active" 
+            data-filter="all"
+          >
+            Tout voir
+          </button>
+          <button 
+            class="filter-btn" 
+            data-filter="photo"
+          >
+            Photos
+          </button>
+          <button 
+            class="filter-btn" 
+            data-filter="video"
+          >
+            Vidéos
+          </button>
+          <button 
+            class="filter-btn" 
+            data-filter="spectacle"
+          >
+            Spectacles
+          </button>
+          <button 
+            class="filter-btn" 
+            data-filter="evenement"
+          >
+            Événements privés
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery-section">
+      <div class="container">
+        <div class="gallery-grid">
+          <!-- Les éléments de la galerie seront injectés ici par JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal (caché par défaut) -->
+    <div class="modal" id="gallery-modal">
+      <div class="modal-content">
+        <div class="modal-media">
+          <!-- Le contenu du média (image ou vidéo) sera injecté ici -->
+        </div>
+        <div class="modal-info">
+          <h2 id="modal-title"></h2>
+          <p id="modal-description"></p>
+          <button class="btn btn-gradient modal-close-btn">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h2>Disco-Fiesta</h2>
+          <p>Le meilleur du disco pour vos événements</p>
+        </div>
+        <div class="footer-cta">
+          <a href="contact.html" class="btn btn-gradient">Contactez-nous</a>
+        </div>
+      </div>
+      
+      <div class="social-links">
+        <a href="https://facebook.com/discofiesta" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://instagram.com/discofiesta" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com/discofiesta" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+      
+      <div class="copyright">
+        © <span id="year"></span> Disco-Fiesta. Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/galerie.js"></script>
+</body>
+</html>
