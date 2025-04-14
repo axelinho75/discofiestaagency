@@ -2,15 +2,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Liste des clients
     const clients = [
-      { name: "Casino Barrière (Deauville, La Baule, Enghien-les-bains)", logo: "images/Barriere.png" },
-      { name: "Ville d'Halluin", logo: "images/client-2.png" },
-      { name: "Ville de Paris", logo: "images/client-3.png" },
-      { name: "Trappes", logo: "images/client-4.png" },
-      { name: "Eragny-sur-Oise", logo: "images/client-5.png" },
-      { name: "Porsche", logo: "images/client-6.png" },
-      { name: "B&M", logo: "images/client-7.png" },
-      { name: "Centrakor", logo: "images/client-7.png" },
-      { name: "Olympia de Paris", logo: "images/client-7.png" }
+      { name: "Casino Barrière (Deauville, La Baule, Enghien-les-bains)", logo: "images/Barrière.jpg" },
+      { name: "Ville d'Halluin", logo: "images/Halluin.jpg" },
+      { name: "Ville de Paris", logo: "images/blason_paris.png" },
+      { name: "Trappes", logo: "images/trappes.jpeg" },
+      { name: "Eragny-sur-Oise", logo: "images/eragny-sur-oise.png" },
+      { name: "Porsche", logo: "images/Porshe.jpg" },
+      { name: "B&M", logo: "images/B&M.svg" },
+      { name: "Centrakor", logo: "images/centrakor.jpg" }
     ];
   
     const clientsGrid = document.querySelector('.clients-grid');
