@@ -167,4 +167,56 @@ document.addEventListener('DOMContentLoaded', function() {
         this.dispatchEvent(event);
       });
     });
+
+    // Intercepter la soumission du formulaire
+    contactForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      // Marquer tous les champs comme touchés pour valider l'ensemble
+      document.querySelectorAll('.form-control').forEach(input => {
+        input.dataset.touched = 'true';
+        const inputEvent = new Event('input');
+        input.dispatchEvent(inputEvent);
+      });
+      
+      // Vérifier s'il y a des erreurs      
+      if (!hasErrors) {
+        // Utilisation de fetch pour soumettre le formulaire à Formspree
+        const formData = new FormData(contactForm);
+        
+        fetch('https://formspree.io/f/xnnpragq', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        })
+        .then(response => {
+          if (response.ok) {
+            // Afficher le message de succès
+            formContent.classList.add('hidden');
+            successMessage.classList.remove('hidden');
+            // Réinitialiser le formulaire
+            contactForm.reset();
+          } else {
+            throw new Error('Erreur réseau');
+          }
+        })
+        .catch(error => {
+          console.error('Erreur:', error);
+          alert('Une erreur est survenue lors de l\'envoi du formulaire. Veuillez réessayer.');
+        });
+      }
+    });
+    
+    // Bouton pour faire une nouvelle demande après succès
+    document.getElementById('new-request-btn').addEventListener('click', function() {
+      successMessage.classList.add('hidden');
+      formContent.classList.remove('hidden');
+      
+      // Réinitialiser les statuts "touched"
+      document.querySelectorAll('.form-control').forEach(input => {
+        delete input.dataset.touched;
+      });
+    });
   });
