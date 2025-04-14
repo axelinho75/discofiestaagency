@@ -1,13 +1,10 @@
-/* Styles spécifiques pour la page Références */
 
-/* Main avec fond noir */
 .references-main {
     min-height: 100vh;
     background-color: var(--color-black);
-    padding-top: 70px; /* Pour éviter que le header fixe cache le contenu */
+    padding-top: 70px; 
   }
   
-  /* Hero section */
   .hero-section {
     padding: 6rem 1rem;
     text-align: center;
@@ -26,10 +23,9 @@
     margin: 0 auto;
   }
   
-  /* Section clients */
   .clients-section {
     padding: 5rem 1rem;
-    background-color: #111827; /* bg-gray-900 */
+    background-color: #111827; 
   }
   
   .clients-section h2 {
@@ -46,7 +42,7 @@
   }
   
   .client-card {
-    background-color: rgba(255, 255, 255, 0.1); /* bg-white/10 */
+    background-color: rgba(255, 255, 255, 0.1); 
     padding: 1.5rem;
     border-radius: 0.75rem;
     display: flex;
@@ -76,7 +72,7 @@
     text-align: center;
     font-size: 1.125rem;
     font-weight: bold;
-    color: #d1d5db; /* text-gray-300 */
+    color: #d1d5db;
   }
   
   .client-logo {
@@ -91,10 +87,9 @@
     filter: grayscale(0);
   }
   
-  /* CTA Section */
   .cta-section {
     padding: 4rem 1rem;
-    background: linear-gradient(to right, #6b21a8, #be185d); /* from-purple-800 to-pink-800 */
+    background: linear-gradient(to right, #6b21a8, #be185d); 
     text-align: center;
     color: white;
   }
@@ -115,7 +110,7 @@
   
   .btn-white {
     background-color: white;
-    color: #6b21a8; /* text-purple-900 */
+    color: #6b21a8; 
     padding: 1rem 2rem;
     border-radius: 9999px;
     font-weight: bold;
@@ -129,7 +124,6 @@
     transform: translateY(-2px);
   }
   
-  /* Media queries */
   @media (min-width: 768px) {
     .clients-grid {
       grid-template-columns: repeat(4, 1fr);

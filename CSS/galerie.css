@@ -1,13 +1,10 @@
-/* Styles spécifiques pour la page Galerie */
 
-/* Fond noir pour main */
 .gallery-main {
     min-height: 100vh;
     background-color: var(--color-black);
-    padding-top: 70px; /* Pour éviter que le header fixe cache le contenu */
+    padding-top: 70px; 
   }
   
-  /* Hero section */
   .hero-section {
     padding: 6rem 1rem;
     text-align: center;
@@ -26,7 +23,6 @@
     margin: 0 auto;
   }
   
-  /* Filters section */
   .filters-section {
     padding: 1rem;
   }
@@ -42,7 +38,7 @@
   .filter-btn {
     padding: 0.5rem 1.5rem;
     border-radius: 2rem;
-    background-color: #1f2937; /* gray-800 */
+    background-color: #1f2937; 
     color: white;
     border: none;
     cursor: pointer;
@@ -50,14 +46,13 @@
   }
   
   .filter-btn:hover {
-    background-color: #374151; /* gray-700 */
+    background-color: #374151; 
   }
   
   .filter-btn.active {
     background: linear-gradient(to right, var(--color-purple-light), var(--color-pink-light));
   }
-  
-  /* Gallery grid */
+
   .gallery-section {
     padding: 1rem;
     margin-bottom: 6rem;
@@ -71,7 +66,7 @@
   
   .gallery-item {
     position: relative;
-    background-color: #1f2937; /* gray-900 */
+    background-color: #1f2937; 
     border-radius: 0.75rem;
     overflow: hidden;
     cursor: pointer;
@@ -136,7 +131,7 @@
   
   .gallery-item-content p {
     font-size: 0.875rem;
-    color: #d1d5db; /* gray-300 */
+    color: #d1d5db; 
   }
   
   .gallery-item-badge {
@@ -157,7 +152,6 @@
     background-color: var(--color-pink-light);
   }
   
-  /* Modal styling */
   .modal {
     position: fixed;
     inset: 0;
@@ -180,7 +174,7 @@
   .modal-content {
     max-width: 64rem;
     width: 100%;
-    background-color: #1f2937; /* gray-900 */
+    background-color: #1f2937; 
     border-radius: 0.75rem;
     overflow: hidden;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
@@ -246,10 +240,9 @@
   
   .modal-info p {
     margin-bottom: 1rem;
-    color: #d1d5db; /* gray-300 */
+    color: #d1d5db; 
   }
   
-  /* Media queries */
   @media (min-width: 640px) {
     .gallery-grid {
       grid-template-columns: repeat(2, 1fr);

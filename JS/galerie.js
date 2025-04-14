@@ -1,6 +1,4 @@
-// galerie.js - Scripts pour la page galerie
 document.addEventListener('DOMContentLoaded', function() {
-    // Données de la galerie
     const galleryItems = [
       {
         id: 1,
@@ -61,11 +59,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const galleryGrid = document.querySelector('.gallery-grid');
     const modal = document.getElementById('gallery-modal');
   
-    // Fonction pour extraire l'ID YouTube des URLs
     function getYoutubeId(url) {
       if (!url) return '';
       
-      // Différents formats d'URL YouTube
       const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
       const match = url.match(regExp);
       
@@ -74,24 +70,18 @@ document.addEventListener('DOMContentLoaded', function() {
         : '';
     }
   
-    // Fonction pour filtrer et afficher les éléments de la galerie
     function renderGalleryItems() {
-      // Filtrer les éléments selon le filtre sélectionné
       const filteredItems = selectedFilter === "all" 
         ? galleryItems 
         : galleryItems.filter(item => item.type === selectedFilter || item.category === selectedFilter);
       
-      // Vider la grille
       galleryGrid.innerHTML = '';
       
-      // Ajouter les éléments filtrés
       filteredItems.forEach((item, index) => {
-        // Créer l'élément de la galerie
         const galleryItem = document.createElement('div');
         galleryItem.className = 'gallery-item';
         galleryItem.setAttribute('data-id', item.id);
         
-        // Ajouter le contenu HTML
         galleryItem.innerHTML = `
           <div class="gallery-item-img">
             <img src="${item.src}" alt="${item.title}">
@@ -111,24 +101,19 @@ document.addEventListener('DOMContentLoaded', function() {
           </div>
         `;
         
-        // Ajouter l'événement de clic
         galleryItem.addEventListener('click', () => openModal(item));
         
-        // Ajouter à la grille
         galleryGrid.appendChild(galleryItem);
         
-        // Animation d'apparition avec délai
         setTimeout(() => {
           galleryItem.classList.add('visible');
         }, index * 100);
       });
     }
   
-    // Fonction pour ouvrir le modal
     function openModal(item) {
       selectedItem = item;
       
-      // Préparer le contenu du modal
       const modalTitle = document.getElementById('modal-title');
       const modalDescription = document.getElementById('modal-description');
       const modalMedia = document.querySelector('.modal-media');
@@ -136,12 +121,10 @@ document.addEventListener('DOMContentLoaded', function() {
       modalTitle.textContent = item.title;
       modalDescription.textContent = item.description;
       
-      // Préparer le contenu média selon le type
       if (item.type === 'photo') {
         modalMedia.innerHTML = `<img src="${item.src}" alt="${item.title}">`;
       } else if (item.type === 'video') {
         if (item.videoUrl) {
-          // Vidéo YouTube
           const youtubeId = getYoutubeId(item.videoUrl);
           modalMedia.innerHTML = `
             <iframe 
@@ -152,7 +135,6 @@ document.addEventListener('DOMContentLoaded', function() {
             ></iframe>
           `;
         } else if (item.videoSrc) {
-          // Vidéo locale
           modalMedia.innerHTML = `
             <video 
               src="${item.videoSrc}" 
@@ -162,7 +144,6 @@ document.addEventListener('DOMContentLoaded', function() {
             ></video>
           `;
         } else {
-          // Pas de vidéo disponible
           modalMedia.innerHTML = `
             <div class="video-unavailable">
               <i class="fas fa-play-circle"></i>
@@ -172,61 +153,51 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
       
-      // Afficher le modal
       modal.classList.add('active');
-      document.body.style.overflow = 'hidden'; // Empêcher le défilement
+      document.body.style.overflow = 'hidden'; 
     }
   
-    // Fonction pour fermer le modal
     function closeModal() {
       modal.classList.remove('active');
-      document.body.style.overflow = ''; // Restaurer le défilement
+      document.body.style.overflow = ''; 
       
-      // Arrêter les vidéos en cours de lecture
       const videos = modal.querySelectorAll('video, iframe');
       videos.forEach(video => {
         if (video.tagName === 'VIDEO') {
           video.pause();
         } else if (video.tagName === 'IFRAME') {
-          video.src = video.src; // Recharger l'iframe pour arrêter la lecture
+          video.src = video.src; 
         }
       });
       
       selectedItem = null;
     }
   
-    // Initialiser les filtres
     function initFilters() {
       const filterButtons = document.querySelectorAll('.filter-btn');
       
       filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-          // Mettre à jour le filtre sélectionné
           selectedFilter = button.getAttribute('data-filter');
           
-          // Mettre à jour l'état actif des boutons
           filterButtons.forEach(btn => btn.classList.remove('active'));
           button.classList.add('active');
           
-          // Recharger les éléments de la galerie
           renderGalleryItems();
         });
       });
     }
   
-    // Initialiser le bouton de fermeture du modal
     function initModalClose() {
       const closeButton = document.querySelector('.modal-close-btn');
       closeButton.addEventListener('click', closeModal);
       
-      // Fermer le modal en cliquant à l'extérieur du contenu
       modal.addEventListener('click', event => {
         if (event.target === modal) {
           closeModal();
         }
       });
       
-      // Fermer le modal avec la touche Escape
       document.addEventListener('keydown', event => {
         if (event.key === 'Escape' && modal.classList.contains('active')) {
           closeModal();
@@ -234,13 +205,12 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   
-    // Initialiser la page
     function initGalleryPage() {
       renderGalleryItems();
       initFilters();
       initModalClose();
     }
   
-    // Démarrer
+  
     initGalleryPage();
   });
