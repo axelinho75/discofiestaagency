@@ -86,37 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
       return isValid;
     }
   
-    contactForm.addEventListener('submit', function(event) {
-      event.preventDefault();
-      
-      if (validateForm()) {
-        const formData = new FormData(contactForm);
-        const formDataObj = {};
-        
-        formData.forEach((value, key) => {
-          formDataObj[key] = value;
-        });
-        
-        console.log('Données du formulaire:', formDataObj);
-        
-       
-        
-        formContent.style.display = 'none';
-        successMessage.classList.remove('hidden');
-        
-        formContent.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-    
-    if (newRequestBtn) {
-      newRequestBtn.addEventListener('click', function() {
-        contactForm.reset();
-        
-        successMessage.classList.add('hidden');
-        formContent.style.display = 'block';
-      });
-    }
-    
+    // Validation des champs en temps réel
     document.querySelectorAll('.form-control').forEach(input => {
       input.addEventListener('input', function() {
         if (this.dataset.touched) {
@@ -146,14 +116,19 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
 
+    // Un seul gestionnaire d'événement submit
     contactForm.addEventListener('submit', function(event) {
       event.preventDefault();
       
+      // Marquer tous les champs comme touchés pour validation
       document.querySelectorAll('.form-control').forEach(input => {
         input.dataset.touched = 'true';
         const inputEvent = new Event('input');
         input.dispatchEvent(inputEvent);
       });
+      
+      // Vérifier s'il y a des erreurs
+      const hasErrors = [...document.querySelectorAll('.error-message')].some(el => el.textContent);
       
       if (!hasErrors) {
         const formData = new FormData(contactForm);
@@ -181,12 +156,17 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     
-    document.getElementById('new-request-btn').addEventListener('click', function() {
-      successMessage.classList.add('hidden');
-      formContent.classList.remove('hidden');
-      
-      document.querySelectorAll('.form-control').forEach(input => {
-        delete input.dataset.touched;
+    // Bouton pour faire une nouvelle demande
+    if (newRequestBtn) {
+      newRequestBtn.addEventListener('click', function() {
+        successMessage.classList.add('hidden');
+        formContent.classList.remove('hidden');
+        
+        document.querySelectorAll('.form-control').forEach(input => {
+          delete input.dataset.touched;
+        });
+        
+        contactForm.reset();
       });
-    });
-  });
+    }
+});
