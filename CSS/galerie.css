@@ -1,4 +1,3 @@
-
 .gallery-main {
     min-height: 100vh;
     background-color: var(--color-black);
@@ -181,11 +180,15 @@
     max-height: 90vh;
     display: flex;
     flex-direction: column;
+    /* Ajoute ceci pour permettre le scroll si besoin */
+    overflow-y: auto;
   }
   
   .modal-media {
     position: relative;
-    height: 70vh;
+    /* Limite la hauteur sur mobile pour laisser la place au bouton */
+    max-height: 40vh;
+    min-height: 200px;
   }
   
   .modal-media img {
@@ -230,22 +233,16 @@
   
   .modal-info {
     padding: 1.5rem;
-  }
-  
-  .modal-info h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
-  
-  .modal-info p {
-    margin-bottom: 1rem;
-    color: #d1d5db; 
+    background: #1f2937;
+    flex-shrink: 0;
   }
   
   @media (min-width: 640px) {
     .gallery-grid {
       grid-template-columns: repeat(2, 1fr);
+    }
+    .modal-media {
+      max-height: 70vh;
     }
   }
   
