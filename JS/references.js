@@ -8,7 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
       { name: "Porsche", logo: "assets/images/Porsche.jpg" },
       { name: "B&M", logo: "assets/images/B&M.svg" },
       { name: "Centrakor", logo: "assets/images/centrakor.jpg" },
-      { name: "Idemia", logo: "assets/images/idemia.jpg" }
+      { name: "Idemia", logo: "assets/images/idemia.jpg" },
+      { name: "Deauville", logo: "assets/images/casinodeauville.jpg" },
+      { name: "Enghein", logo: "assets/images/enghein.jpg" },
+      { name: "Labaule", logo: "assets/images/labaule.png" }
     ];
   
     const clientsGrid = document.querySelector('.clients-grid');
