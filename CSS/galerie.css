@@ -80,10 +80,8 @@
   }
   
   .gallery-item-img {
-    aspect-ratio: 16/9;
     width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; /* 16/9 ratio */
+    height: 200px;         /* Hauteur fixe pour toutes les images */
     position: relative;
     overflow: hidden;
     background: #111;
@@ -91,10 +89,11 @@
   }
   
   .gallery-item-img img {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* Remplit le cadre sans déformer */
     display: block;
+    position: static;      /* Plus besoin d'absolu */
   }
   
   .gallery-item:hover .gallery-item-img img {
