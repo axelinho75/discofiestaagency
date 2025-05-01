@@ -154,6 +154,11 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       
       modal.classList.add('active');
+      modal.scrollTop = 0; // Force le scroll en haut du modal
+      const closeBtn = modal.querySelector('.modal-close-btn');
+      if (closeBtn) {
+        closeBtn.focus();
+      }
       document.body.style.overflow = 'hidden'; 
     }
   

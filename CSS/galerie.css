@@ -263,3 +263,14 @@
       font-size: 4rem;
     }
   }
+
+  /* Ajoute à la fin de galerie.css */
+  @media (max-width: 640px) {
+    .modal-content {
+      max-height: 95vh;
+      height: 95vh;
+    }
+    .modal-media {
+      max-height: 40vh;
+    }
+  }
