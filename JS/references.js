@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
       { name: "Eragny-sur-Oise", logo: "assets/images/eragny-sur-oise.png" },
       { name: "Porsche", logo: "assets/images/Porsche.jpg" },
       { name: "B&M", logo: "assets/images/B&M.svg" },
-      { name: "Centrakor", logo: "assets/images/centrakor.jpg" }
+      { name: "Centrakor", logo: "assets/images/centrakor.jpg" },
+      { name: "Idemia", logo: "assets/images/idemia.jpg" }
     ];
   
     const clientsGrid = document.querySelector('.clients-grid');
