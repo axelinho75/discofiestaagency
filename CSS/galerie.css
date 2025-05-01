@@ -80,17 +80,21 @@
   }
   
   .gallery-item-img {
-    position: relative;
-    height: 18rem;
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: auto;
     overflow: hidden;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .gallery-item-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Remplit le cadre sans déformer, coupe si besoin */
-    aspect-ratio: 16/9; /* Ajoute cette ligne pour forcer un ratio harmonieux */
-    transition: transform 0.5s ease;
+    object-fit: cover;
+    display: block;
   }
   
   .gallery-item:hover .gallery-item-img img {
