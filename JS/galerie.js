@@ -35,17 +35,9 @@ document.addEventListener('DOMContentLoaded', function() {
         description: "Animation pour le séminaire annuel d'une grande entreprise.",
         category: "evenement"
       },
+      
       {
         id: 5,
-        type: "video",
-        title: "Show Deauville",
-        src: "assets/images/tribute.jpeg",
-        videoSrc: "assets/videos/videoDeauville.mp4",
-        description: "Le Show Disco à Deauville, un événement inoubliable.",
-        category: "evenement"
-      },
-      {
-        id: 6,
         type: "photo",
         title: "Bal du 13 juillet de Paris",
         src: "assets/images/photo11.jpg",
