@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
       {
         id: 1,
         type: "video",
-        title: "Soirée au Casino Barrière de Deauville",
+        title: "tribute To Disco au Casino de Barrière de Deauville",
         
         src: "assets/images/gallery-1.jpg",
-        videoSrc: "assets/videos/video1.mp4",
+        videoSrc: "assets/videos/ShowDisco.mp4",
         description: "Le spectacle iconique qui à fait sensation ses 3 derniers années.",
         category: "spectacle"
       },
