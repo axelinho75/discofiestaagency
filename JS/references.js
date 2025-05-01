@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const clients = [
       { name: "Casino Barrière (Deauville, La Baule, Enghien-les-bains)", logo: "assets/images/Barrière.jpg" },
       { name: "Ville d'Halluin", logo: "assets/images/Halluin.jpg" },
-      { name: "Ville de Paris", logo: "assets/images/blason_paris.png" },
+      { name: "Ville de Paris", logo: "assets/images/paris.jpg" },
       { name: "Trappes", logo: "assets/images/trappes.jpeg" },
       { name: "Eragny-sur-Oise", logo: "assets/images/eragny-sur-oise.png" },
       { name: "Porsche", logo: "assets/images/Porsche.jpg" },
