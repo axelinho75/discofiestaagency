@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
       {
         id: 1,
         type: "video",
-        title: "tribute To Disco au Casino de Barrière de Deauville",
+        title: "Tribute To Disco au Casino de Barrière de Deauville",
         
         src: "assets/images/gallery-1.jpg",
         videoSrc: "assets/videos/ShowDisco.mp4",
