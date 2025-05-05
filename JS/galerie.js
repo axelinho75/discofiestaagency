@@ -208,6 +208,19 @@ document.addEventListener('DOMContentLoaded', function() {
       initModalClose();
     }
   
-  
+    // Ouvre la modale si un paramètre d'URL est présent (ex: ?video=1)
+    function openModalFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      const videoId = params.get('video');
+      if (videoId) {
+        const item = galleryItems.find(i => i.id == videoId && i.type === 'video');
+        if (item) {
+          // Attends que la galerie soit rendue avant d'ouvrir la modale
+          setTimeout(() => openModal(item), 300);
+        }
+      }
+    }
+
     initGalleryPage();
+    openModalFromURL(); // <-- Ajoute cet appel ici
   });
